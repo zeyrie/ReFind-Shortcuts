@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReFind-Shortcuts</title>
+</head>
+
+<body>
+    <header>
+        <h1>ReFind: Shortcuts</h1>
+
+        <button>Add Category</button>
+    </header>
+
+    {{ range . }}
+    <section>
+        <h2>{{ .Title }}</h2>
+        {{ if .Description }}
+        <p>{{ .Description }}</p>
+        {{ end }}
+    </section>
+    {{ end }}
+
+</body>
+
+</html>

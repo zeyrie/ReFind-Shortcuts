@@ -21,6 +21,9 @@ func init() {
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 
+		cg, _ := db.FetchAllCategories()
+		tpl.ExecuteTemplate(w, "index.html", cg)
+
 	})
 
 	http.ListenAndServe(":4334", nil)
